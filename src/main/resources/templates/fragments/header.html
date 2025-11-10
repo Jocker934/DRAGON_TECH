@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title th:text="${title} ?: 'DRAGON TECH – Soluciones Tecnológicas'">DRAGON TECH</title>
+  <meta name="description" content="IA, RPA, ERP, Ciberseguridad, IoT y Data para empresas.">
+  <meta property="og:title" content="DRAGON TECH – Soluciones Tecnológicas">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Tecnología inteligente para transformar tu empresa.">
+  <!-- Tailwind rápido (CDN). Más adelante pasamos a build con npm. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dragon: {
+              bg: '#0B0F14',
+              ink: '#D1D5DB',
+              neon: '#7AE0FF',
+              neon2: '#55C7F2'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; }
+    h1,h2,h3{ font-family: Montserrat, Inter, Arial; }
+  </style>
+</head>
+<body class="bg-dragon-bg text-white">
+<header class="border-b border-white/10 backdrop-blur bg-black/20">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <a href="/" class="text-dragon-neon font-extrabold tracking-wider text-xl">DRAGON TECH</a>
+    <button id="navbtn" class="md:hidden px-3 py-2 border border-white/20 rounded">≡</button>
+    <ul id="menu" class="hidden md:flex gap-6 text-sm">
+      <li><a class="hover:text-dragon-neon" href="/nosotros">Nosotros</a></li>
+      <li><a class="hover:text-dragon-neon" href="/servicios">Servicios</a></li>
+      <li><a class="hover:text-dragon-neon" href="/proyectos">Proyectos</a></li>
+      <li><a class="hover:text-dragon-neon" href="/clientes">Clientes</a></li>
+      <li><a class="hover:text-dragon-neon" href="/blog">Blog</a></li>
+      <li><a href="/contacto" class="px-3 py-1 rounded border border-dragon-neon text-dragon-neon hover:bg-dragon-neon hover:text-black transition">Contacto</a></li>
+    </ul>
+  </nav>
+  <ul id="mobile" class="md:hidden hidden px-4 pb-4 space-y-2 text-sm">
+    <li><a class="block p-2 bg-white/5 rounded" href="/nosotros">Nosotros</a></li>
+    <li><a class="block p-2 bg-white/5 rounded" href="/servicios">Servicios</a></li>
+    <li><a class="block p-2 bg-white/5 rounded" href="/proyectos">Proyectos</a></li>
+    <li><a class="block p-2 bg-white/5 rounded" href="/clientes">Clientes</a></li>
+    <li><a class="block p-2 bg-white/5 rounded" href="/blog">Blog</a></li>
+    <li><a class="block p-2 border border-dragon-neon text-dragon-neon rounded" href="/contacto">Contacto</a></li>
+  </ul>
+</header>
+<main class="min-h-[70vh]">
+<script>
+  const btn = document.getElementById('navbtn');
+  if (btn) btn.onclick = () => {
+    document.getElementById('mobile').classList.toggle('hidden');
+  };
+</script>
