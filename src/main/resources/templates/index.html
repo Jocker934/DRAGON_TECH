@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+<body class="bg-[#0b0b0e] text-white font-sans overflow-x-hidden relative">
+
+<header th:replace="fragments/header :: navbar"></header>
+
+<!-- HERO PRINCIPAL -->
+<section class="relative h-screen flex flex-col items-center justify-center text-center">
+  <!-- Degradado oscuro -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0b0b0e] via-[#0b0b0e]/90 to-[#0b0b0e]"></div>
+
+  <!-- Video de fondo -->
+  <video autoplay loop muted playsinline class="absolute w-full h-full object-cover opacity-25">
+    <source src="/videos/tech_bg.mp4" type="video/mp4">
+  </video>
+
+  <!-- Contenido -->
+  <div class="relative z-10 px-6 max-w-4xl mx-auto">
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
+      Innovación que impulsa el <span class="text-[#00BFFF]">futuro</span>.
+    </h1>
+
+    <!-- Texto dinámico -->
+    <p class="mt-3 text-[#9AA0A6] text-lg">
+      Expertos en <span id="changing-text" class="text-[#00BFFF] font-semibold"></span>
+    </p>
+
+    <script>
+      const words = ["Inteligencia Artificial", "Software a Medida", "Automatización RPA", "Ciberseguridad", "IoT Empresarial"];
+      let i = 0;
+      setInterval(() => {
+        document.getElementById("changing-text").textContent = words[i];
+        i = (i + 1) % words.length;
+      }, 1800);
+    </script>
+
+    <p class="mt-6 text-[#9AA0A6] max-w-2xl mx-auto">
+      Soluciones tecnológicas inteligentes que transforman empresas, optimizan procesos y potencian el futuro digital.
+    </p>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a href="/servicios" class="bg-[#00BFFF] text-black font-semibold px-6 py-3 rounded-lg hover:brightness-95 transition">Descubrir Servicios</a>
+      <a href="/contacto" class="border border-[#00BFFF] text-[#00BFFF] font-semibold px-6 py-3 rounded-lg hover:bg-[#00BFFF] hover:text-black transition">Solicitar Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS DESTACADOS -->
+<section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
+  <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition transform hover:-translate-y-1">
+    <h3 class="font-bold mb-2 text-[#00BFFF]">DragonBot IA</h3>
+    <p class="text-sm text-[#9AA0A6]">Chatbots inteligentes 24/7 que mejoran la atención al cliente y las ventas automatizadas.</p>
+  </div>
+  <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition transform hover:-translate-y-1">
+    <h3 class="font-bold mb-2 text-[#00BFFF]">DragonFlow (RPA)</h3>
+    <p class="text-sm text-[#9AA0A6]">Automatización de procesos administrativos y financieros con precisión y eficiencia.</p>
+  </div>
+  <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition transform hover:-translate-y-1">
+    <h3 class="font-bold mb-2 text-[#00BFFF]">DragonERP</h3>
+    <p class="text-sm text-[#9AA0A6]">Gestión integral avanzada para PYMES y corporaciones en tiempo real.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN DE CONFIANZA -->
+<section class="max-w-6xl mx-auto px-6 py-12 text-center border-t border-white/10">
+  <h2 class="text-[#9AA0A6] text-sm uppercase mb-6 tracking-widest">Confían en la tecnología de DRAGON TECH</h2>
+  <div class="flex flex-wrap justify-center items-center gap-8 opacity-80">
+    <img src="/images/brand1.svg" alt="Cliente 1" class="h-10 grayscale hover:grayscale-0 transition" />
+    <img src="/images/brand2.svg" alt="Cliente 2" class="h-10 grayscale hover:grayscale-0 transition" />
+    <img src="/images/brand3.png" alt="Cliente 3" class="h-10 grayscale hover:grayscale-0 transition" />
+  </div>
+</section>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/51997978179" target="_blank"
+   class="fixed bottom-6 right-6 bg-[#00BFFF] p-4 rounded-full shadow-lg hover:scale-110 transition">
+   <img src="/images/whatsapp.svg" alt="WhatsApp" class="w-6 h-6"/>
+</a>
+
+</body>
+</html>
+
+

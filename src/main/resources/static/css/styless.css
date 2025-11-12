@@ -1,0 +1,31 @@
+body {
+  background-color: #0b0b0e;
+  color: #E8EAED;
+  font-family: 'Inter', sans-serif;
+}
+
+.text-dragon { color: #00BFFF; }
+
+.btn-dragon {
+  background: linear-gradient(90deg, #00BFFF 0%, #007BFF 100%);
+  color: #000;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-dragon:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Sutil animación de fondo del Hero */
+@keyframes neonPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+}
+
+video {
+  animation: neonPulse 4s infinite ease-in-out;
+}

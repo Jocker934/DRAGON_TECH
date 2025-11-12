@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body th:fragment="footer">
+  <footer class="border-t border-white/10 mt-16 bg-black/50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-sm text-gray-400">
+      <p><center>© <span th:text="${#dates.format(#dates.createNow(),'yyyy')}"></span></center><center>DRAGON TECH – Soluciones Tecnológicas Lima, Perú</center> </p>
+          </div>
+  </footer>
+</body>
+</html>
