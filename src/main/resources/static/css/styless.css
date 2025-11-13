@@ -4,9 +4,10 @@ body {
   color: #E8EAED;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* === COLORES Y UTILIDADES === */
+/* === COLORES === */
 .text-dragon { color: #00BFFF; }
 .text-muted { color: #9AA0A6; }
 
@@ -23,7 +24,7 @@ body {
   filter: brightness(1.1);
 }
 
-/* === ANIMACIÓN VIDEO HERO === */
+/* === VIDEO HERO === */
 @keyframes neonPulse {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 0.9; }
@@ -40,16 +41,13 @@ h1, h2, h3, h4 {
   letter-spacing: 0.5px;
 }
 
-/* Animación de aparición */
 @keyframes fadein {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-fadein {
-  animation: fadein 1.5s ease-in-out;
-}
+.animate-fadein { animation: fadein 1.5s ease-in-out; }
 
-/* === TARJETAS (Servicios y Beneficios) === */
+/* === TARJETAS === */
 .card, .p-6 {
   transition: all 0.4s ease;
   background: rgba(255, 255, 255, 0.03);
@@ -63,7 +61,7 @@ h1, h2, h3, h4 {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* === CONTADORES ANIMADOS === */
+/* === CONTADORES === */
 #count1, #count2, #count3, #count4 {
   font-weight: 800;
   color: #00BFFF;
@@ -74,7 +72,7 @@ h1, h2, h3, h4 {
   text-shadow: 0 0 10px #00BFFF;
 }
 
-/* === ASISTENTE IA (DragonBot) === */
+/* === DRAGONBOT === */
 #dragonbot button {
   box-shadow: 0 0 20px rgba(0,191,255,0.4);
 }
@@ -85,7 +83,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 15px rgba(0,191,255,0.2);
 }
 
-/* === EFECTOS DE CLIENTES === */
+/* === CLIENTES === */
 img.grayscale {
   filter: grayscale(100%);
   transition: all 0.3s ease;
@@ -94,7 +92,7 @@ img.grayscale:hover {
   filter: grayscale(0%) drop-shadow(0 0 8px rgba(0,191,255,0.3));
 }
 
-/* === SCROLLBAR PERSONALIZADO === */
+/* === SCROLLBAR === */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -116,3 +114,69 @@ footer a:hover {
   color: #00BFFF;
   text-shadow: 0 0 6px #00BFFF;
 }
+
+/* === ANIMACIONES SUAVES === */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* TABLETS */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.75rem;
+    line-height: 1.2;
+  }
+  .p-6 {
+    padding: 1.25rem;
+  }
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .grid {
+    gap: 1.5rem;
+  }
+}
+
+/* MÓVILES */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .p-6 {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .btn-dragon {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  video {
+    opacity: 0.2;
+  }
+  #dragonbot button {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+}
+
