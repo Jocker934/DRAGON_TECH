@@ -1,10 +1,14 @@
+/* === BASE GLOBAL === */
 body {
   background-color: #0b0b0e;
   color: #E8EAED;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
+/* === COLORES Y UTILIDADES === */
 .text-dragon { color: #00BFFF; }
+.text-muted { color: #9AA0A6; }
 
 .btn-dragon {
   background: linear-gradient(90deg, #00BFFF 0%, #007BFF 100%);
@@ -14,18 +18,101 @@ body {
   padding: 0.75rem 1.5rem;
   transition: all 0.3s ease-in-out;
 }
-
 .btn-dragon:hover {
   transform: scale(1.05);
   filter: brightness(1.1);
 }
 
-/* Sutil animación de fondo del Hero */
+/* === ANIMACIÓN VIDEO HERO === */
 @keyframes neonPulse {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 0.9; }
 }
-
 video {
   animation: neonPulse 4s infinite ease-in-out;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* === HERO === */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Animación de aparición */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadein {
+  animation: fadein 1.5s ease-in-out;
+}
+
+/* === TARJETAS (Servicios y Beneficios) === */
+.card, .p-6 {
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+}
+.card:hover, .p-6:hover {
+  transform: translateY(-6px);
+  border-color: #00BFFF;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* === CONTADORES ANIMADOS === */
+#count1, #count2, #count3, #count4 {
+  font-weight: 800;
+  color: #00BFFF;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+#count1:hover, #count2:hover, #count3:hover, #count4:hover {
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #00BFFF;
+}
+
+/* === ASISTENTE IA (DragonBot) === */
+#dragonbot button {
+  box-shadow: 0 0 20px rgba(0,191,255,0.4);
+}
+#botModal {
+  animation: fadein 0.4s ease;
+  background: rgba(11,11,14,0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,191,255,0.2);
+}
+
+/* === EFECTOS DE CLIENTES === */
+img.grayscale {
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+img.grayscale:hover {
+  filter: grayscale(0%) drop-shadow(0 0 8px rgba(0,191,255,0.3));
+}
+
+/* === SCROLLBAR PERSONALIZADO === */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #00BFFF;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #0b0b0e;
+}
+
+/* === FOOTER === */
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #9AA0A6;
+}
+footer a:hover {
+  color: #00BFFF;
+  text-shadow: 0 0 6px #00BFFF;
 }
