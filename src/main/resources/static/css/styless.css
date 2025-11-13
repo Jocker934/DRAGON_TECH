@@ -179,4 +179,94 @@ footer a:hover {
     padding: 2rem 1rem;
   }
 }
+/* ==== Animaciones genéricas para la página Nosotros ==== */
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Contenedor de la sección historia + misión/visión */
+.nosotros-section {
+    position: relative;
+}
+
+/* Línea sutil animada en la parte superior de la sección */
+.nosotros-section:first-of-type::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #00eaff, #7b3ff7, #00eaff);
+    background-size: 200% 100%;
+    animation: gradientMove 7s ease infinite;
+}
+
+/* Animación de entrada suave */
+.nosotros-two-columns > div {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.nosotros-two-columns > div:first-child {
+    animation-delay: 0.1s;
+}
+
+.nosotros-two-columns > div:last-child {
+    animation-delay: 0.25s;
+}
+
+/* Tarjetas de misión / visión con más vida */
+.mv-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.mv-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 26px rgba(0, 234, 255, 0.35);
+    border-color: rgba(0, 234, 255, 0.7);
+}
+/* Animación de entrada para los valores */
+.values-grid .value-card {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+}
+
+/* Pequeño escalonado en la aparición */
+.values-grid .value-card:nth-child(1) { animation-delay: 0.15s; }
+.values-grid .value-card:nth-child(2) { animation-delay: 0.25s; }
+.values-grid .value-card:nth-child(3) { animation-delay: 0.35s; }
+.values-grid .value-card:nth-child(4) { animation-delay: 0.45s; }
+.values-grid .value-card:nth-child(5) { animation-delay: 0.55s; }
+
+/* Hover más marcado en los valores */
+.value-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 28px rgba(0, 234, 255, 0.35);
+    border-color: rgba(0, 234, 255, 0.7);
+}
 

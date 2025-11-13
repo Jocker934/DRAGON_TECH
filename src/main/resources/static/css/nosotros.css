@@ -1,0 +1,534 @@
+/* Etiqueta tipo pastilla arriba del título */
+.nosotros-pill {
+    display: inline-block;
+    padding: 4px 14px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    background: rgba(0, 234, 255, 0.12);
+    color: #7be9ff;
+    border: 1px solid rgba(0, 234, 255, 0.35);
+}
+
+/* Imagen con marco bonito */
+.nosotros-image-frame {
+    position: relative;
+    border-radius: 28px;
+    padding: 3px;
+    background: linear-gradient(135deg, rgba(0, 234, 255, 0.5), rgba(128, 90, 213, 0.4));
+    box-shadow: 0 0 40px rgba(0, 234, 255, 0.25);
+    overflow: hidden;
+    min-height: 320px;
+}
+
+.nosotros-image-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.nosotros-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.25), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(155, 81, 224, 0.35), transparent 60%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+.nosotros-image-caption {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(4, 10, 22, 0.8);
+    border: 1px solid rgba(0, 234, 255, 0.5);
+    backdrop-filter: blur(10px);
+    font-size: 12px;
+}
+
+.nosotros-image-caption span {
+    font-weight: 600;
+    color: #00eaff;
+}
+
+.nosotros-image-caption p {
+    margin: 0;
+    margin-top: 2px;
+    font-size: 11px;
+}
+
+/* Badge en las tarjetas de misión/visión */
+.card-badge {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(0, 234, 255, 0.12);
+    color: #7be9ff;
+    margin-bottom: 8px;
+}
+
+.card-badge-alt {
+    background: rgba(155, 81, 224, 0.18);
+    color: #d9b4ff;
+}
+
+/* Sección de valores */
+.nosotros-values {
+    margin-top: 70px;
+}
+
+.nosotros-values h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.values-intro {
+    color: #a0b4ff;
+    max-width: 620px;
+    margin-bottom: 25px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+@media (max-width: 900px) {
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.value-card {
+    padding: 20px 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(39, 59, 112, 0.9);
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.1), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(155, 81, 224, 0.18), rgba(12, 18, 34, 0.98));
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.45);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 28px rgba(0, 234, 255, 0.35);
+}
+
+.value-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #00eaff;
+}
+/* ========= SECCIÓN NOSOTROS ========= */
+
+.nosotros-container {
+    padding: 140px 20px 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-content {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .nosotros-content {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+
+.nosotros-text {
+    color: #d8e6ff;
+}
+
+.nosotros-pill {
+    display: inline-block;
+    padding: 4px 14px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    background: rgba(0, 234, 255, 0.12);
+    color: #7be9ff;
+    border: 1px solid rgba(0, 234, 255, 0.35);
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #00eaff, #7b3ff7);
+    -webkit-text-fill-color: transparent;
+}
+
+.intro {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 26px;
+}
+
+.highlight {
+    color: #00eaff;
+    font-weight: 600;
+}
+
+.block {
+    margin-bottom: 30px;
+}
+
+.block h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Misión / Visión en dos tarjetas */
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    padding: 18px 16px;
+    border-radius: 16px;
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.15), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(155, 81, 224, 0.18), rgba(10, 15, 31, 0.98));
+    border: 1px solid rgba(39, 59, 112, 0.9);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #00eaff;
+}
+
+/* Imagen lateral */
+.nosotros-img img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid rgba(39, 59, 112, 0.9);
+    box-shadow: 0 0 25px rgba(0, 234, 255, 0.25);
+    object-fit: cover;
+}
+
+/* Valores */
+.nosotros-values {
+    margin-top: 60px;
+}
+
+.nosotros-values h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.values-intro {
+    color: #a0b4ff;
+    max-width: 600px;
+    margin-bottom: 22px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+@media (max-width: 900px) {
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.value-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(39, 59, 112, 0.9);
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.12), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(155, 81, 224, 0.18), rgba(12, 18, 34, 0.98));
+}
+
+.value-card h3 {
+    margin-bottom: 6px;
+    font-size: 17px;
+    color: #00eaff;
+}
+/* ============= PÁGINA NOSOTROS ============= */
+
+.nosotros-page {
+    padding: 130px 20px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HERO */
+
+.nosotros-hero {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.nosotros-hero-bg {
+    position: absolute;
+    inset: -60px 0 0;
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.35), transparent 55%),
+                radial-gradient(circle at top right, rgba(155, 81, 224, 0.35), transparent 60%);
+    opacity: 0.5;
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+.nosotros-hero-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .nosotros-hero-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.nosotros-pill {
+    display: inline-block;
+    padding: 4px 14px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    background: rgba(0, 234, 255, 0.12);
+    color: #7be9ff;
+    border: 1px solid rgba(0, 234, 255, 0.35);
+}
+
+.nosotros-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: #dde5ff;
+    /*background: linear-gradient(to right, #ffffff, #7b3ff7);*/
+}
+
+.nosotros-subtitle {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d8e6ff;
+    max-width: 620px;
+    margin-bottom: 26px;
+}
+
+.highlight {
+    color: #00eaff;
+    font-weight: 600;
+}
+
+/* Métricas */
+
+.nosotros-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.metric {
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(41, 60, 120, 0.9);
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.18), transparent 55%),
+                rgba(8, 14, 32, 0.95);
+}
+
+.metric-number {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #00eaff;
+}
+
+.metric-label {
+    font-size: 12px;
+    color: #a4b5ff;
+}
+
+/* Tarjeta lateral del hero */
+
+.nosotros-hero-card {
+    padding: 20px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(41, 60, 120, 0.9);
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.2), transparent 50%),
+                radial-gradient(circle at bottom right, rgba(155, 81, 224, 0.25), rgba(8, 14, 32, 0.98));
+    box-shadow: 0 0 26px rgba(0, 0, 0, 0.55);
+}
+
+.hero-card-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #a4b5ff;
+    margin-bottom: 6px;
+}
+
+.hero-card-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #dde5ff;
+}
+
+.hero-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-card-list li {
+    font-size: 13px;
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 4px;
+    color: #c4d0ff;
+}
+
+.hero-card-list li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #00eaff;
+}
+
+/* Secciones */
+
+.nosotros-section {
+    margin-bottom: 60px;
+}
+
+.nosotros-two-columns {
+    display: grid;
+    grid-template-columns: 1.4fr 1.1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .nosotros-two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-title {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.section-subtitle {
+    color: #a4b5ff;
+    max-width: 640px;
+    margin-bottom: 22px;
+}
+
+/* Misión / Visión */
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.mv-card {
+    padding: 16px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(41, 60, 120, 0.9);
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.18), transparent 55%),
+                rgba(8, 14, 32, 0.98);
+}
+
+.mv-card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #00eaff;
+}
+
+/* Valores */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+@media (max-width: 900px) {
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.value-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(39, 59, 112, 0.9);
+    background: radial-gradient(circle at top left, rgba(0, 234, 255, 0.12), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(155, 81, 224, 0.18), rgba(12, 18, 34, 0.98));
+}
+
+.value-card h3 {
+    margin-bottom: 6px;
+    font-size: 17px;
+    color: #00eaff;
+}
+.page-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+

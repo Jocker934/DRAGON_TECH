@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header ::head"></head>
+<body class="bg-slate-950 text-slate-100">
+
+<!-- Header reutilizable -->
+<header th:replace="fragments/header :: navbar"></header>
+
+<main class="nosotros-page">
+
+    <!-- HERO SUPERIOR -->
+    <section class="nosotros-hero">
+        <div class="nosotros-hero-bg"></div>
+
+        <div class="nosotros-hero-content">
+            <div>
+                <span class="nosotros-pill">Quiénes somos</span>
+                <h1 class="nosotros-title">Impulsamos la innovación empresarial en Perú</h1>
+                <p class="nosotros-subtitle">
+                    En <span class="highlight">DRAGON TECH</span> acompañamos a las organizaciones 
+                    en su transformación digital, combinando tecnología, datos y automatización 
+                    con una visión estratégica de negocio.
+                </p>
+
+                <div class="nosotros-metrics">
+                    <div class="metric">
+                        <span class="metric-number">+5</span>
+                        <span class="metric-label">Sectores atendidos</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">24/7</span>
+                        <span class="metric-label">Acompañamiento</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">2030</span>
+                        <span class="metric-label">Meta de liderazgo digital</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nosotros-hero-card">
+                <p class="hero-card-title">Nuestro propósito</p>
+                <p class="hero-card-text">
+                    Convertir la tecnología en una aliada tangible para las empresas, 
+                    facilitando decisiones basadas en datos y procesos más inteligentes.
+                </p>
+                <ul class="hero-card-list">
+                    <li>Soluciones a medida</li>
+                    <li>Enfoque consultivo</li>
+                    <li>Relaciones de largo plazo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORIA + MISIÓN / VISIÓN -->
+    <section class="nosotros-section">
+         <h1 class="page-title">Nosotros</h1>
+
+        <div class="nosotros-two-columns">
+            <div>
+                <h2 class="section-title">Nuestra historia</h2>
+                <p>
+                    DRAGON TECH nace como la iniciativa de un equipo de profesionales apasionados por 
+                    la tecnología y la innovación. Observamos que muchas empresas peruanas querían 
+                    modernizarse, pero no contaban con soluciones digitales adaptadas a su contexto.
+                </p>
+                <p>
+                    Desde entonces, hemos trabajado junto a organizaciones de distintos sectores 
+                    para rediseñar procesos, automatizar tareas críticas y construir bases sólidas 
+                    para la toma de decisiones basada en datos.
+                </p>
+            </div>
+
+            <div class="mission-vision-grid">
+                <article class="mv-card">
+                    <h3>Misión</h3>
+                    <p>
+                        Desarrollar soluciones tecnológicas que transformen los procesos empresariales, 
+                        haciendo que las organizaciones sean más eficientes, competitivas y preparadas 
+                        para los desafíos del futuro.
+                    </p>
+                </article>
+
+                <article class="mv-card">
+                    <h3>Visión</h3>
+                    <p>
+                        Ser la empresa peruana líder en innovación digital para el 2030, reconocida 
+                        por la calidad de sus soluciones, la cercanía con sus clientes y el impacto 
+                        positivo en el crecimiento de las empresas.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALORES EN TARJETAS -->
+    <section class="nosotros-section">
+        <h2 class="section-title">Nuestros valores</h2>
+        <p class="section-subtitle">
+            Nos guiamos por principios que aseguran relaciones de confianza, proyectos exitosos 
+            y un impacto positivo en las organizaciones.
+        </p>
+
+        <div class="values-grid">
+            <article class="value-card">
+                <h3>Innovación</h3>
+                <p>
+                    Buscamos constantemente nuevas ideas y tecnologías para proponer soluciones creativas, 
+                    escalables y de alto impacto.
+                </p>
+            </article>
+
+            <article class="value-card">
+                <h3>Ética</h3>
+                <p>
+                    Actuamos con transparencia, honestidad y responsabilidad en cada decisión y proyecto.
+                </p>
+            </article>
+
+            <article class="value-card">
+                <h3>Compromiso</h3>
+                <p>
+                    Acompañamos a nuestros clientes como aliados estratégicos, enfocados en resultados medibles.
+                </p>
+            </article>
+
+            <article class="value-card">
+                <h3>Excelencia</h3>
+                <p>
+                    Cuidamos cada detalle para ofrecer servicios y productos de alta calidad, 
+                    pensados para el largo plazo.
+                </p>
+            </article>
+
+            <article class="value-card">
+                <h3>Sostenibilidad</h3>
+                <p>
+                    Promovemos soluciones digitales responsables que generen valor sostenible para 
+                    negocios, personas y sociedad.
+                </p>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+
+
+
+<!-- Footer reutilizable -->
+<footer th:replace="fragments/footer :: footer"></footer>
+
+</body>
+</html>
