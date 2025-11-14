@@ -20,10 +20,10 @@ public class HomeController {
         return "nosotros";
     }
     
-    @GetMapping("/servicios")
+    /*@GetMapping("/servicios")
     public String servicios() {
         return "servicios";
-    }
+    }*/
 
     @GetMapping("/proyectos")
     public String proyectos() {

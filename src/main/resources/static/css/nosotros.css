@@ -1,0 +1,165 @@
+/* ====== CABECERA ====== */
+
+.servicios-header {
+  max-width: 52rem;
+}
+
+.servicios-header p {
+  line-height: 1.6;
+}
+
+/* ====== GRID ====== */
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== TARJETA ====== */
+
+.servicio-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 18px;
+  overflow: hidden;
+  background: radial-gradient(circle at top left,
+      rgba(0, 191, 255, 0.16),
+      rgba(9, 9, 11, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
+  transform: translateY(12px);
+  opacity: 0;
+  animation: cardIn 0.55s ease-out forwards;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animación escalonada */
+.servicio-card:nth-child(1) { animation-delay: 0.05s; }
+.servicio-card:nth-child(2) { animation-delay: 0.10s; }
+.servicio-card:nth-child(3) { animation-delay: 0.15s; }
+.servicio-card:nth-child(4) { animation-delay: 0.20s; }
+.servicio-card:nth-child(5) { animation-delay: 0.25s; }
+
+.servicio-card-inner {
+  display: flex;
+  gap: 1.1rem;
+  padding: 1.3rem 1.4rem 1.4rem 1.4rem;
+  align-items: flex-start;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
+}
+
+.servicio-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at bottom right,
+      rgba(0, 191, 255, 0.18),
+      transparent 55%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover: efecto profesional */
+.servicio-card:hover .servicio-card-inner {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+}
+
+.servicio-card:hover {
+  border-color: rgba(0, 191, 255, 0.7);
+}
+
+.servicio-card:hover::after {
+  opacity: 1;
+}
+
+/* ====== ICONO ====== */
+
+.servicio-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  background: rgba(0, 191, 255, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.servicio-icon img {
+  max-width: 52px;
+  max-height: 52px;
+}
+
+/* ====== CONTENIDO ====== */
+
+.servicio-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin: 0 0 0.35rem 0;
+}
+
+.servicio-resumen {
+  font-size: 0.9rem;
+  color: #9aa0a6;
+  line-height: 1.55;
+  margin: 0 0 0.75rem 0;
+}
+
+/* CTA dentro de la tarjeta */
+.servicio-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #00bfff;
+  cursor: pointer;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.servicio-cta .flecha {
+  font-size: 1.1rem;
+  transition: transform 0.18s ease;
+}
+
+.servicio-card:hover .servicio-cta {
+  color: #5fd5ff;
+  transform: translateX(2px);
+}
+
+.servicio-card:hover .servicio-cta .flecha {
+  transform: translateX(3px);
+}
+
+

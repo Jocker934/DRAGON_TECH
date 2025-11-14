@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+<body class="bg-[#0b0b0e] text-white">
+
+<header th:replace="fragments/header :: navbar"></header>
+
+<!-- CSS específico del detalle -->
+<style>
+  .servicio-detalle-layout {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 900px) {
+    .servicio-detalle-layout {
+      flex-direction: column;
+    }
+  }
+
+  .servicio-detalle-icon {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* AQUÍ CONTROLAMOS EL TAMAÑO DEL ÍCONO GRANDE */
+  .servicio-detalle-icon img {
+    max-width: 260px !important;  /* ancho máximo */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .servicio-detalle-info {
+    width: 320px;
+    max-width: 100%;
+    background: #050608;
+    border-radius: 18px;
+    padding: 1.5rem 1.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .servicio-detalle-info h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #00bfff;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .servicio-detalle-resumen {
+    font-size: 0.9rem;
+    color: #9aa0a6;
+    margin: 0 0 0.9rem 0;
+  }
+
+  .servicio-detalle-descripcion {
+    font-size: 0.9rem;
+    color: #e5e7eb;
+    line-height: 1.6;
+  }
+
+  .servicio-detalle-descripcion p {
+    margin: 0 0 0.6rem 0;
+  }
+
+  .servicio-detalle-cta {
+    margin-top: 1.5rem;
+  }
+
+  .servicio-detalle-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    background: #00bfff;
+    color: #050608;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.18s ease, transform 0.18s ease,
+      box-shadow 0.18s ease;
+  }
+
+  .servicio-detalle-cta a:hover {
+    background: #39c9ff;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4);
+  }
+</style>
+
+<main class="max-w-6xl mx-auto px-6 py-16">
+
+  <a th:href="@{/servicios}"
+     class="text-[#00BFFF] text-sm hover:underline block mb-4">
+    &larr; Volver a servicios
+  </a>
+
+  <section class="servicio-detalle-layout">
+    <!-- Icono -->
+    <div class="servicio-detalle-icon">
+      <img th:src="${servicio.icono}" th:alt="${servicio.nombre}" />
+    </div>
+
+    <!-- Panel de información -->
+    <aside class="servicio-detalle-info">
+      <h1 th:text="${servicio.nombre}">Nombre del servicio</h1>
+
+      <p class="servicio-detalle-resumen" th:text="${servicio.resumen}">
+        Resumen del servicio
+      </p>
+
+      <div class="servicio-detalle-descripcion" th:utext="${servicio.descripcion}">
+        <!-- Descripción desde BD -->
+      </div>
+
+      <div class="servicio-detalle-cta">
+        <a th:href="@{/contacto}">
+          Agenda una consultoría
+        </a>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

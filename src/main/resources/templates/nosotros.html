@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+    <link rel="stylesheet" href="/css/nosotros.css">
+</head>
+<body class="bg-[#0b0b0e] text-white font-sans overflow-x-hidden relative">
+
+<header th:replace="fragments/header :: navbar"></header>
+
+<!-- SECCIÓN HERO "NOSOTROS" -->
+<section class="relative flex items-center justify-center h-[70vh] text-center overflow-hidden">
+  <video autoplay loop muted playsinline class="absolute w-full h-full object-cover opacity-30">
+    <source src="/videos/tech_bg2.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0b0b0e]/60 to-[#0b0b0e]"></div>
+
+  <div class="relative z-10 max-w-3xl px-6">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fadein">
+      Conoce a <span class="text-[#00BFFF]">DRAGON TECH</span>
+    </h1>
+    <p class="text-[#9AA0A6] text-lg">Innovamos para transformar la forma en que las empresas crecen y evolucionan con tecnología inteligente.</p>
+  </div>
+</section>
+
+<!-- HISTORIA Y PROPÓSITO -->
+<section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+  <div class="animate-fadein">
+    <h2 class="text-3xl font-bold text-[#00BFFF] mb-4">Nuestra Historia</h2>
+    <p class="text-[#9AA0A6] leading-relaxed">
+      Fundada en 2025, <span class="text-[#00BFFF] font-semibold">DRAGON TECH</span> nació con el propósito de impulsar la transformación digital de las empresas peruanas y latinoamericanas. 
+      A través de la innovación tecnológica, la automatización y la inteligencia artificial, hemos acompañado a organizaciones de todos los sectores a optimizar procesos y alcanzar un nuevo nivel de eficiencia.
+    </p>
+    <p class="text-[#9AA0A6] mt-4 leading-relaxed">
+      Hoy, seguimos comprometidos con un solo objetivo: 
+      <span class="text-[#00BFFF] font-semibold">convertir la tecnología en una aliada estratégica</span> para el crecimiento sostenible.
+    </p>
+  </div>
+
+  <div class="relative group">
+    <img src="/images/office_dragontech.jpg" alt="Equipo Dragon Tech" class="rounded-2xl shadow-lg opacity-90 group-hover:opacity-100 transition duration-500">
+    <div class="absolute inset-0 border-2 border-[#00BFFF]/20 rounded-2xl group-hover:border-[#00BFFF] transition-all"></div>
+  </div>
+</section>
+
+<!-- MISIÓN Y VISIÓN -->
+<section class="bg-white/5 border-y border-white/10 py-20 text-center">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <div class="p-6 rounded-2xl border border-white/10 hover:border-[#00BFFF] bg-white/5 transition-all">
+      <h3 class="text-2xl font-bold text-[#00BFFF] mb-3">Misión</h3>
+      <p class="text-[#9AA0A6] leading-relaxed">
+        “Desarrollar soluciones tecnológicas que transformen los procesos empresariales.”
+      </p>
+    </div>
+
+    <div class="p-6 rounded-2xl border border-white/10 hover:border-[#00BFFF] bg-white/5 transition-all">
+      <h3 class="text-2xl font-bold text-[#00BFFF] mb-3">Visión</h3>
+      <p class="text-[#9AA0A6] leading-relaxed">
+        “Ser la empresa peruana líder en innovación digital para el 2030.”
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES CORPORATIVOS -->
+<section class="max-w-6xl mx-auto px-6 py-20 text-center">
+  <h2 class="text-3xl font-bold text-[#00BFFF] mb-10">Nuestros Valores</h2>
+  <div class="grid md:grid-cols-5 gap-8">
+    <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-[#00BFFF] transition-all">
+      <h4 class="font-semibold mb-2 text-[#00BFFF]">Innovación</h4>
+      <p class="text-[#9AA0A6] text-sm">Buscamos constantemente nuevas formas de crear valor.</p>
+    </div>
+    <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-[#00BFFF] transition-all">
+      <h4 class="font-semibold mb-2 text-[#00BFFF]">Ética</h4>
+      <p class="text-[#9AA0A6] text-sm">Actuamos con integridad, transparencia y responsabilidad social.</p>
+    </div>
+    <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-[#00BFFF] transition-all">
+      <h4 class="font-semibold mb-2 text-[#00BFFF]">Compromiso</h4>
+      <p class="text-[#9AA0A6] text-sm">Acompañamos cada proyecto como si fuera propio.</p>
+    </div>
+    <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-[#00BFFF] transition-all">
+      <h4 class="font-semibold mb-2 text-[#00BFFF]">Excelencia</h4>
+      <p class="text-[#9AA0A6] text-sm">Buscamos superar las expectativas en cada entrega.</p>
+    </div>
+    <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-[#00BFFF] transition-all">
+      <h4 class="font-semibold mb-2 text-[#00BFFF]">Sostenibilidad</h4>
+      <p class="text-[#9AA0A6] text-sm">Apostamos por un futuro tecnológico responsable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LLAMADO A LA ACCIÓN -->
+<section class="text-center py-20 border-t border-white/10 bg-gradient-to-b from-[#0b0b0e] to-[#0d141b]">
+  <h2 class="text-3xl font-bold mb-4">¿Quieres ser parte de la revolución digital?</h2>
+  <p class="text-[#9AA0A6] mb-8">Únete a nuestra misión de construir un futuro impulsado por la tecnología y la innovación.</p>
+  <a href="/contacto" class="btn-dragon">Contáctanos</a>
+</section>
+
+<!-- MODAL DE CONTACTO -->
+<div id="contactModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 transition-opacity">
+  <div class="bg-[#0b0b0e] border border-[#00BFFF]/40 rounded-2xl p-8 w-[90%] max-w-lg shadow-2xl relative animate-fadein">
+    
+    <!-- Botón cerrar -->
+    <button id="closeModal" class="absolute top-4 right-4 text-[#00BFFF] text-2xl font-bold hover:text-white transition">×</button>
+    
+    <h3 class="text-3xl font-bold text-[#00BFFF] mb-4 text-center">Contáctanos</h3>
+    <p class="text-[#9AA0A6] text-center mb-6">Déjanos tus datos y un asesor de <span class="text-[#00BFFF] font-semibold">DRAGON TECH</span> se comunicará contigo.</p>
+
+    <form id="contactForm" class="space-y-4">
+      <div>
+        <label class="block text-sm text-[#9AA0A6] mb-1">Nombre completo</label>
+        <input type="text" name="nombre" required class="w-full p-3 rounded-lg bg-white/5 border border-white/10 focus:border-[#00BFFF] outline-none text-white">
+      </div>
+      <div>
+        <label class="block text-sm text-[#9AA0A6] mb-1">Correo electrónico</label>
+        <input type="email" name="correo" required class="w-full p-3 rounded-lg bg-white/5 border border-white/10 focus:border-[#00BFFF] outline-none text-white">
+      </div>
+      <div>
+        <label class="block text-sm text-[#9AA0A6] mb-1">Mensaje</label>
+        <textarea name="mensaje" rows="4" required class="w-full p-3 rounded-lg bg-white/5 border border-white/10 focus:border-[#00BFFF] outline-none text-white"></textarea>
+      </div>
+      <button type="submit" class="w-full btn-dragon mt-4">Enviar Mensaje</button>
+    </form>
+  </div>
+</div>
+
+
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+<!-- ASISTENTE IA DRAGONBOT -->
+<div id="dragonbot" class="fixed bottom-24 right-6 z-50">
+  <button id="botButton" class="bg-[#00BFFF] text-black p-4 rounded-full shadow-lg hover:scale-110 transition">
+    🤖
+  </button>
+  <div id="botModal" class="hidden absolute bottom-20 right-0 bg-black/80 border border-[#00BFFF] rounded-lg p-4 w-72 text-sm">
+    <p class="text-[#00BFFF] font-semibold mb-2">Hola, soy DragonBot 🤖</p>
+    <p class="text-[#9AA0A6] mb-4">¿Deseas una demostración o agendar asesoría?</p>
+    <a href="/contacto" class="px-4 py-2 bg-[#00BFFF] text-black rounded font-semibold hover:brightness-110 transition">Contactar</a>
+  </div>
+</div>
+
+<script>
+// Bot IA DragonBot
+  const botButton = document.getElementById("botButton");
+  const botModal = document.getElementById("botModal");
+  botButton.addEventListener("click", () => {
+    botModal.classList.toggle("hidden");
+  });
+</script>
+
+<script>
+  const contactButton = document.querySelector('.btn-dragon');
+  const modal = document.getElementById('contactModal');
+  const closeModal = document.getElementById('closeModal');
+
+  contactButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  });
+
+  // Envío simulado (puede integrarse con backend más adelante)
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('✅ Mensaje enviado correctamente. ¡Gracias por contactarte con DRAGON TECH!');
+    modal.classList.add('hidden');
+  });
+</script>
+
+
+</body>
+</html>
